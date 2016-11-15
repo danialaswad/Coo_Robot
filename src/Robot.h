@@ -18,7 +18,8 @@ private:
 
 public:
     // constructor
-    Robot (string direction = ""): _direction(direction){};
+    Robot ():_direction("N"){};
+    Robot (string direction): _direction(direction){};
     // member function
     void avancer(int x, int y);
     void tourner(string direction);

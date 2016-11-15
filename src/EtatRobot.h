@@ -6,12 +6,31 @@
 #define COO_ROBOT_ETATROBOT_H
 
 
+#include <string>
+#include "Objet.h"
+#include "Plot.h"
+
 class EtatRobot {
-
 public:
-    // constructor
-    EtatRobot(){};
+    virtual EtatRobot avancer(int x, int y);
 
+    virtual EtatRobot touner(std::string new_diection);
+
+    virtual EtatRobot saisir(Objet o);
+
+    virtual EtatRobot poser();
+
+    virtual EtatRobot peser();
+
+    virtual EtatRobot rencontrerPlot(Plot p);
+
+    virtual EtatRobot evaluerPlot();
+
+    virtual EtatRobot figer();
+
+    virtual EtatRobot repartir();
+
+    virtual EtatRobot afficher();
 };
 
 
