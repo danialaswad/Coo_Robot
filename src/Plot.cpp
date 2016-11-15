@@ -3,3 +3,7 @@
 //
 
 #include "Plot.h"
+
+int Plot::getHauteur() {
+    return _hauteur;
+}

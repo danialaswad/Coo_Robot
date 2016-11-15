@@ -8,13 +8,13 @@
 
 class Objet {
 private:
-    int _weight;
+    int _poids;
 
 public:
     // constructor
-    Objet(int weight = 0) : _weight(weight){};
+    Objet(int p = 0) : _poids(p){};
     // getter
-    int get_weight();
+    int getPoids();
 };
 
 

@@ -7,26 +7,22 @@
 
 
 class Position {
+
 private:
     int _x;
     int _y;
+
 public:
-    int get_x() const {
-        return _x;
-    }
+    // constructor
+    Position(int x=0 , int y = 0): _x(x), _y(y){};
 
-    void set_x(int x) {
-        _x = x;
-    }
-
-    int get_y() const {
-        return _y;
-    }
-
-    void set_y(int y) {
-        _y = y;
-    }
+    //gettere and setter
+    int get_x() const ;
+    void set_x(int x) ;
+    int get_y() const ;
+    void set_y(int y) ;
 };
 
 
 #endif //COO_ROBOT_POSITION_H
+

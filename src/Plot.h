@@ -7,7 +7,15 @@
 
 
 class Plot{
+private:
+    int _hauteur;
 
+public:
+    // constructor
+    Plot(int h = 0): _hauteur(h){};
+
+    // getter
+    int getHauteur();
 };
 
 
