@@ -10,4 +10,10 @@ int main() {
     r.afficher();
     r.tourner("S");
     r.afficher();
+    Plot p;
+    r.rencontrerPlot(p);
+    r.afficher();
+    Objet o;
+    r.saisir(o);
+    r.afficher();
 }

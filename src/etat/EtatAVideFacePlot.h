@@ -19,6 +19,8 @@ protected:
 public:
     static EtatAVideFacePlot* instance();
 
+    virtual EtatRobot* saisir();
+
 };
 
 

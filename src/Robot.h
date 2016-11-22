@@ -21,7 +21,8 @@ private:
     EtatRobot* _etat = EtatAVide::instance();
     string _direction;
     Position _position;
-
+    Objet _objet;
+    Plot _plot;
 
 public:
     // constructor

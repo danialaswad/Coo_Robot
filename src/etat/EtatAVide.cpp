@@ -3,6 +3,7 @@
 //
 
 #include "EtatAVide.h"
+#include "EtatAVideFacePlot.h"
 
 EtatAVide* EtatAVide::instanceUnique = new EtatAVide();
 
@@ -16,4 +17,8 @@ EtatRobot *EtatAVide::avancer() {
 
 EtatRobot *EtatAVide::tourner() {
     return this;
+}
+
+EtatRobot *EtatAVide::rencontrerPlot() {
+    return EtatAVideFacePlot::instance();
 }

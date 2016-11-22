@@ -21,6 +21,7 @@ public:
 
     virtual EtatRobot* avancer();
     virtual EtatRobot* tourner();
+    virtual EtatRobot* rencontrerPlot();
 
 };
 
