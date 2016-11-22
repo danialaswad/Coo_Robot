@@ -16,8 +16,11 @@ using namespace std;
 
 class Robot {
 private:
+    EtatRobot* etat = EtatRobot::instance();
     string _direction;
     Position _position;
+
+
 public:
     // constructor
     Robot ():_direction("N"){};

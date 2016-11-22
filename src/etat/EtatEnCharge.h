@@ -17,7 +17,7 @@ protected:
     EtatEnCharge() {};
 
 public:
-    static virtual EtatEnCharge* instance();
+    static EtatEnCharge* instance();
 };
 
 

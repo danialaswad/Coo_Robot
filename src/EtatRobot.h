@@ -20,7 +20,7 @@ protected:
 
 public:
 
-    static virtual EtatRobot* instance();
+    static EtatRobot* instance();
 
     virtual EtatRobot* avancer(int x, int y);
 

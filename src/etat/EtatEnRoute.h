@@ -17,7 +17,7 @@ protected:
     EtatEnRoute(){};
 
 public:
-    static virtual EtatEnRoute* instance();
+    static EtatEnRoute* instance();
 };
 
 

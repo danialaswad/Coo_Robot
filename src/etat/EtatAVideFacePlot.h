@@ -17,7 +17,7 @@ protected:
     EtatAVideFacePlot(){};
 
 public:
-    static virtual EtatAVideFacePlot* instance();
+    static EtatAVideFacePlot* instance();
 
 };
 

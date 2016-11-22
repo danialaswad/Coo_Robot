@@ -17,7 +17,7 @@ protected:
     EtatEnChargeFacePlot(){};
 
 public:
-    static virtual EtatEnChargeFacePlot* instance();
+    static EtatEnChargeFacePlot* instance();
 };
 
 

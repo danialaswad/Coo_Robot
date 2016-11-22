@@ -17,7 +17,7 @@ protected:
     EtatAVide(){};
 
 public:
-    static virtual EtatAVide* instance();
+    static EtatAVide* instance();
 };
 
 

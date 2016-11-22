@@ -18,7 +18,7 @@ protected:
     EtatFiger(){};
 
 public:
-    static virtual EtatFiger* instance();
+    static EtatFiger* instance();
 
 };
 
