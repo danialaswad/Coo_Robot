@@ -1,10 +1,10 @@
 #include <iostream>
+#include "Robot.h"
 
 using namespace std;
 
 int main() {
-    string s = "bye";
-    cout << "Hello, World!" << endl;
-    cout << s << endl;
-    return 0;
+    Robot r = Robot("N");
+    r.afficher();
+    r.avancer(0, 1);
 }

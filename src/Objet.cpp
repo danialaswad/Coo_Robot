@@ -4,6 +4,6 @@
 
 #include "Objet.h"
 
-int Objet::get_weight() {
-    return _weight;
+int Objet::get_poid() {
+    return _poids;
 }

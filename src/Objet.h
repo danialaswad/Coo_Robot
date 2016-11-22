@@ -14,7 +14,7 @@ public:
     // constructor
     Objet(int p = 0) : _poids(p){};
     // getter
-    int getPoids();
+    int get_poid();
 };
 
 
