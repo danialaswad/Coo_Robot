@@ -9,17 +9,19 @@
 #include <string.h>
 #include "Objet.h"
 #include "Plot.h"
+#include "Position.h"
+#include "EtatRobot.h"
 
 using namespace std;
 
 class Robot {
 private:
     string _direction;
-
+    Position _position;
 public:
     // constructor
     Robot ():_direction("N"){};
-    Robot (string direction): _direction(direction){};
+    Robot (string direction): _direction(direction), _position(0,0){};
     // member function
     void avancer(int x, int y);
     void tourner(string direction);
