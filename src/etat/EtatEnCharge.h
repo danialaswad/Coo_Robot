@@ -8,7 +8,7 @@
 
 #include "EtatEnRoute.h"
 
-class EtatEnCharge: EtatEnRoute {
+class EtatEnCharge: public EtatEnRoute {
 
 private:
     static EtatEnCharge *instanceUnique;
