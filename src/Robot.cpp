@@ -51,5 +51,5 @@ void Robot::repartir() {
 }
 
 void Robot::afficher() {
-    std::cout << "Etat : " << "N/A" << ", Position : " << _position << std::endl;
+    std::cout << "Etat : " << _etat << ", Position : " << _position << std::endl;
 }

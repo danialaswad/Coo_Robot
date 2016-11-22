@@ -7,6 +7,7 @@
 
 
 #include <string>
+#include <ostream>
 #include "Objet.h"
 #include "Plot.h"
 
@@ -41,6 +42,8 @@ public:
     virtual EtatRobot* repartir();
 
     virtual EtatRobot* afficher();
+
+    friend std::ostream &operator<<(std::ostream &os, const EtatRobot &robot);
 };
 
 

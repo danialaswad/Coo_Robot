@@ -58,3 +58,7 @@ EtatRobot *EtatRobot::afficher() {
     throw "Action interdit";
     //return nullptr;
 }
+
+std::ostream &operator<<(std::ostream &os, const EtatRobot &robot) {
+    return os;
+}
