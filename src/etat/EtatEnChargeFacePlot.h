@@ -19,10 +19,13 @@ protected:
 public:
     static EtatEnChargeFacePlot* instance();
 
+    // changement d'etat
+    virtual EtatRobot* tourner();
     virtual EtatRobot* poser();
+
+    // reste dans l'etat
     virtual EtatRobot* peser();
     virtual EtatRobot* evaluerPlot();
-    virtual EtatRobot* tourner();
 };
 
 

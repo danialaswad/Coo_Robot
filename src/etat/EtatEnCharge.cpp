@@ -3,6 +3,7 @@
 //
 
 #include "EtatEnCharge.h"
+#include "EtatEnChargeFacePlot.h"
 
 EtatEnCharge* EtatEnCharge::instanceUnique = new EtatEnCharge();
 
@@ -15,5 +16,13 @@ EtatRobot *EtatEnCharge::avancer() {
 }
 
 EtatRobot *EtatEnCharge::tourner() {
+    return this;
+}
+
+EtatRobot *EtatEnCharge::rencontrerPlot() {
+    return EtatEnChargeFacePlot::instance();
+}
+
+EtatRobot *EtatEnCharge::peser() {
     return this;
 }

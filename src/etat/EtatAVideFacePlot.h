@@ -19,9 +19,12 @@ protected:
 public:
     static EtatAVideFacePlot* instance();
 
-    virtual EtatRobot* evaluerPlot();
+    // changemet d'etat
     virtual EtatRobot* saisir();
     virtual EtatRobot* tourner();
+
+    // reste dans l'etat courant
+    virtual EtatRobot* evaluerPlot();
 
 };
 

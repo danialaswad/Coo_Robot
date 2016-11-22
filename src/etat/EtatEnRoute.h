@@ -19,6 +19,7 @@ protected:
 public:
     static EtatEnRoute* instance();
 
+    // changement d'etat
     virtual EtatRobot* figer();
 };
 

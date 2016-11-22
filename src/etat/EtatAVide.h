@@ -19,9 +19,12 @@ protected:
 public:
     static EtatAVide* instance();
 
+    // Changement de etat
+    virtual EtatRobot* rencontrerPlot();
+
+    // reste dans l'etat courant
     virtual EtatRobot* avancer();
     virtual EtatRobot* tourner();
-    virtual EtatRobot* rencontrerPlot();
 
 };
 

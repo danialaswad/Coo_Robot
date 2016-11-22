@@ -19,6 +19,11 @@ protected:
 public:
     static EtatEnCharge* instance();
 
+    // changement d'etat
+    virtual EtatRobot* rencontrerPlot();
+
+    // reste dans l'etat courant
+    virtual EtatRobot* peser();
     virtual EtatRobot* avancer();
     virtual EtatRobot* tourner();
 };

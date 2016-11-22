@@ -20,6 +20,7 @@ protected:
 public:
     static EtatFiger* instance();
 
+    // changement d'etat
     virtual EtatRobot* repartir();
 
 };
