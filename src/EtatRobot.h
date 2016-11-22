@@ -12,25 +12,26 @@
 
 class EtatRobot {
 public:
-    virtual EtatRobot avancer(int x, int y);
 
-    virtual EtatRobot touner(std::string new_diection);
+    virtual EtatRobot* avancer(int x, int y);
 
-    virtual EtatRobot saisir(Objet o);
+    virtual EtatRobot* touner(std::string new_diection);
 
-    virtual EtatRobot poser();
+    virtual EtatRobot* saisir(Objet o);
 
-    virtual EtatRobot peser();
+    virtual EtatRobot* poser();
 
-    virtual EtatRobot rencontrerPlot(Plot p);
+    virtual EtatRobot* peser();
 
-    virtual EtatRobot evaluerPlot();
+    virtual EtatRobot* rencontrerPlot(Plot p);
 
-    virtual EtatRobot figer();
+    virtual EtatRobot* evaluerPlot();
 
-    virtual EtatRobot repartir();
+    virtual EtatRobot* figer();
 
-    virtual EtatRobot afficher();
+    virtual EtatRobot* repartir();
+
+    virtual EtatRobot* afficher();
 };
 
 
