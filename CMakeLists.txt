@@ -7,5 +7,5 @@ set(SOURCE_FILES src/main.cpp src/Robot.cpp src/Robot.h src/Objet.cpp src/Objet.
 add_executable(Coo_Robot ${SOURCE_FILES})
 
 if(CMAKE_BUILD_TYPE MATCHES Debug)
-    target_compile_definitions(Coo_Robot PUBLIC DEBUG=1)
+   target_compile_definitions(Coo_Robot PUBLIC DEBUG=1)
 endif()

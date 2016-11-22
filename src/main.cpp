@@ -13,7 +13,10 @@ int main() {
     Plot p;
     r.rencontrerPlot(p);
     r.afficher();
-    Objet o;
+    Objet o(30);
     r.saisir(o);
+    r.afficher();
+    r.peser();
+    r.figer();
     r.afficher();
 }

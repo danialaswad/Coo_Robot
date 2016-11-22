@@ -48,14 +48,22 @@ void Robot::poser() {
         std::cout << "poser objet" << std::endl;
 #endif
         _etat = _etat->poser();
-        _objet = nullptr;
+        _objet = NULL;
     }catch (const char* e){
         cout << e << endl;
     }
 }
 
 int Robot::peser() {
-    return 0;
+    try {
+#ifdef DEBUG
+        std::cout << "peser" << std::endl;
+#endif
+        _etat = _etat->peser();
+        cout << _objet.get_poid() << endl;
+    }catch (const char* e){
+        cout << e << endl;
+    }
 }
 
 void Robot::rencontrerPlot(Plot p) {
@@ -71,15 +79,39 @@ void Robot::rencontrerPlot(Plot p) {
 }
 
 int Robot::evaluerPlot() {
-    return 0;
+    try {
+#ifdef DEBUG
+        std::cout << "evaluer plot" << std::endl;
+#endif
+        _etat = _etat->evaluerPlot();
+        cout << _plot.getHauteur() << endl;
+    }catch (const char* e){
+        cout << e << endl;
+    }
 }
 
 void Robot::figer() {
 
+    try {
+#ifdef DEBUG
+        std::cout << "figer" << std::endl;
+#endif
+        _etat = _etat->figer();
+    }catch (const char* e){
+        cout << e << endl;
+    }
+
 }
 
 void Robot::repartir() {
-
+    try {
+#ifdef DEBUG
+        std::cout << "repartir" << std::endl;
+#endif
+        _etat = _etat->repartir();
+    }catch (const char* e){
+        cout << e << endl;
+    }
 }
 
 void Robot::afficher() {
