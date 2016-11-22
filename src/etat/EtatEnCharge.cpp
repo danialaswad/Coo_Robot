@@ -13,3 +13,7 @@ EtatEnCharge *EtatEnCharge::instance() {
 EtatRobot *EtatEnCharge::avancer() {
     return this;
 }
+
+EtatRobot *EtatEnCharge::tourner() {
+    return this;
+}

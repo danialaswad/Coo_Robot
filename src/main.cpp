@@ -8,4 +8,6 @@ int main() {
     r.afficher();
     r.avancer(0, 1);
     r.afficher();
+    r.tourner("S");
+    r.afficher();
 }

@@ -25,7 +25,7 @@ public:
 
     virtual EtatRobot* avancer();
 
-    virtual EtatRobot* touner();
+    virtual EtatRobot* tourner();
 
     virtual EtatRobot* saisir();
 

@@ -18,7 +18,7 @@ using namespace std;
 
 class Robot {
 private:
-    EtatRobot* _etat = EtatAVideFacePlot::instance();
+    EtatRobot* _etat = EtatAVide::instance();
     string _direction;
     Position _position;
 

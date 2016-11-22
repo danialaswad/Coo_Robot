@@ -14,7 +14,7 @@ EtatRobot *EtatRobot::avancer(){
     throw "Action interdit";
 }
 
-EtatRobot *EtatRobot::touner() {
+EtatRobot *EtatRobot::tourner() {
     throw "Action interdit";
     //return nullptr;
 }

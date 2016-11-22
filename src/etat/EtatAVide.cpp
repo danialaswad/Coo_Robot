@@ -13,3 +13,7 @@ EtatAVide *EtatAVide::instance() {
 EtatRobot *EtatAVide::avancer() {
     return this;
 }
+
+EtatRobot *EtatAVide::tourner() {
+    return this;
+}

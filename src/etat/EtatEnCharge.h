@@ -20,6 +20,7 @@ public:
     static EtatEnCharge* instance();
 
     virtual EtatRobot* avancer();
+    virtual EtatRobot* tourner();
 };
 
 

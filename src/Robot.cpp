@@ -19,7 +19,15 @@ void Robot::avancer(int x, int y) {
 }
 
 void Robot::tourner(string direction) {
-
+    try {
+    #ifdef DEBUG
+        std::cout << "DEBUG: Robot turning from " << _direction << " to " << direction << std::endl;
+    #endif
+        _etat->tourner();
+        _direction = direction;
+    }catch (const char* e){
+        cout << e << endl;
+    }
 }
 
 void Robot::saisir(Objet objet) {
@@ -51,5 +59,5 @@ void Robot::repartir() {
 }
 
 void Robot::afficher() {
-    std::cout << "Etat : " << _etat << ", Position : " << _position << std::endl;
+    std::cout << "Etat : " << _etat << ", Position : " << _position << ", Direction : " << _direction << std::endl;
 }
