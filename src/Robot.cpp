@@ -5,7 +5,11 @@
 #include "Robot.h"
 
 void Robot::avancer(int x, int y) {
-
+#ifdef DEBUG
+    std::cout << "DEBUG: Robot advancing from " << _position << " to " << Position(x, y) << std::endl;
+#endif
+    _position.set_x(x);
+    _position.set_y(y);
 }
 
 void Robot::tourner(string direction) {
