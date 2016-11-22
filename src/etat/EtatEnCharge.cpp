@@ -9,3 +9,7 @@ EtatEnCharge* EtatEnCharge::instanceUnique = new EtatEnCharge();
 EtatEnCharge *EtatEnCharge::instance() {
     return instanceUnique;
 }
+
+EtatRobot *EtatEnCharge::avancer() {
+    return this;
+}

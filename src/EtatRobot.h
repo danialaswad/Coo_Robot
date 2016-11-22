@@ -22,17 +22,17 @@ public:
 
     static EtatRobot* instance();
 
-    virtual EtatRobot* avancer(int x, int y);
+    virtual EtatRobot* avancer();
 
-    virtual EtatRobot* touner(std::string new_diection);
+    virtual EtatRobot* touner();
 
-    virtual EtatRobot* saisir(Objet o);
+    virtual EtatRobot* saisir();
 
     virtual EtatRobot* poser();
 
     virtual EtatRobot* peser();
 
-    virtual EtatRobot* rencontrerPlot(Plot p);
+    virtual EtatRobot* rencontrerPlot();
 
     virtual EtatRobot* evaluerPlot();
 

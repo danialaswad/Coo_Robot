@@ -10,42 +10,51 @@ EtatRobot *EtatRobot::instance() {
     return instanceUnique;
 }
 
-EtatRobot *EtatRobot::avancer(int x, int y) {
-    return nullptr;
+EtatRobot *EtatRobot::avancer(){
+    throw "Action interdit";
 }
 
-EtatRobot *EtatRobot::touner(std::string new_diection) {
-    return nullptr;
+EtatRobot *EtatRobot::touner() {
+    throw "Action interdit";
+    //return nullptr;
 }
 
-EtatRobot *EtatRobot::saisir(Objet o) {
-    return nullptr;
+EtatRobot *EtatRobot::saisir() {
+    throw "Action interdit";
+    //return nullptr;
 }
 
 EtatRobot *EtatRobot::poser() {
-    return nullptr;
+    throw "Action interdit";
+    //return nullptr;
 }
 
 EtatRobot *EtatRobot::peser() {
-    return nullptr;
+    throw "Action interdit";
+    //return nullptr;
 }
 
-EtatRobot *EtatRobot::rencontrerPlot(Plot p) {
-    return nullptr;
+EtatRobot *EtatRobot::rencontrerPlot() {
+    throw "Action interdit";
+    //return nullptr;
 }
 
 EtatRobot *EtatRobot::evaluerPlot() {
-    return nullptr;
+    throw "Action interdit";
+    //return nullptr;
 }
 
 EtatRobot *EtatRobot::figer() {
-    return nullptr;
+    throw "Action interdit";
+    //return nullptr;
 }
 
 EtatRobot *EtatRobot::repartir() {
-    return nullptr;
+    throw "Action interdit";
+    //return nullptr;
 }
 
 EtatRobot *EtatRobot::afficher() {
-    return nullptr;
+    throw "Action interdit";
+    //return nullptr;
 }

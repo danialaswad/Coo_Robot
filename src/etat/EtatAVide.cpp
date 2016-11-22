@@ -9,3 +9,7 @@ EtatAVide* EtatAVide::instanceUnique = new EtatAVide();
 EtatAVide *EtatAVide::instance() {
     return instanceUnique;
 }
+
+EtatRobot *EtatAVide::avancer() {
+    return this;
+}

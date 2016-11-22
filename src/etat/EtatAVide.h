@@ -18,6 +18,9 @@ protected:
 
 public:
     static EtatAVide* instance();
+
+    virtual EtatRobot* avancer();
+
 };
 
 

@@ -18,6 +18,8 @@ protected:
 
 public:
     static EtatEnCharge* instance();
+
+    virtual EtatRobot* avancer();
 };
 
 
