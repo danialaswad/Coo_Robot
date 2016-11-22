@@ -4,6 +4,12 @@
 
 #include "EtatRobot.h"
 
+EtatRobot* EtatRobot::instanceUnique = new EtatRobot();
+
+EtatRobot *EtatRobot::instance() {
+    return instanceUnique;
+}
+
 EtatRobot *EtatRobot::avancer(int x, int y) {
     return nullptr;
 }

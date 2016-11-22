@@ -11,7 +11,16 @@
 #include "Plot.h"
 
 class EtatRobot {
+
+private:
+    static EtatRobot* instanceUnique;
+
+protected:
+    EtatRobot(){};
+
 public:
+
+    static virtual EtatRobot* instance();
 
     virtual EtatRobot* avancer(int x, int y);
 
