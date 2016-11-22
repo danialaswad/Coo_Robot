@@ -60,5 +60,6 @@ EtatRobot *EtatRobot::afficher() {
 }
 
 std::ostream &operator<<(std::ostream &os, const EtatRobot &robot) {
+    os << typeid(robot).name();
     return os;
 }

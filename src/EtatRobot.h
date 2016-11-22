@@ -8,6 +8,7 @@
 
 #include <string>
 #include <ostream>
+#include <typeinfo>
 #include "Objet.h"
 #include "Plot.h"
 
