@@ -3,5 +3,5 @@ project(Coo_Robot)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
-set(SOURCE_FILES src/main.cpp src/Robot.cpp src/Robot.h src/Objet.cpp src/Objet.h src/Plot.cpp src/Plot.h src/EtatRobot.cpp src/EtatRobot.h src/Position.h src/EtatFiger.cpp src/EtatFiger.h src/Position.cpp)
+set(SOURCE_FILES src/main.cpp src/Robot.cpp src/Robot.h src/Objet.cpp src/Objet.h src/Plot.cpp src/Plot.h src/EtatRobot.cpp src/EtatRobot.h src/Position.h src/etat/EtatFiger.cpp src/etat/EtatFiger.h src/Position.cpp)
 add_executable(Coo_Robot ${SOURCE_FILES})
