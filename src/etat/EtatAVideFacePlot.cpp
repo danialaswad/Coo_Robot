@@ -4,6 +4,7 @@
 
 #include "EtatAVideFacePlot.h"
 #include "EtatEnChargeFacePlot.h"
+#include "EtatAVide.h"
 
 EtatAVideFacePlot* EtatAVideFacePlot::instanceUnique = new EtatAVideFacePlot();
 
@@ -13,4 +14,12 @@ EtatAVideFacePlot *EtatAVideFacePlot::instance() {
 
 EtatRobot *EtatAVideFacePlot::saisir() {
     return EtatEnChargeFacePlot::instance();
+}
+
+EtatRobot *EtatAVideFacePlot::tourner() {
+    return EtatAVide::instance();
+}
+
+EtatRobot *EtatAVideFacePlot::evaluerPlot() {
+    return this;
 }

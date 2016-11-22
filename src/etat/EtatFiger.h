@@ -20,6 +20,8 @@ protected:
 public:
     static EtatFiger* instance();
 
+    virtual EtatRobot* repartir();
+
 };
 
 

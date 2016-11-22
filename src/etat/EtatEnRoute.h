@@ -18,6 +18,8 @@ protected:
 
 public:
     static EtatEnRoute* instance();
+
+    virtual EtatRobot* figer();
 };
 
 

@@ -3,9 +3,14 @@
 //
 
 #include "EtatEnRoute.h"
+#include "EtatFiger.h"
 
 EtatEnRoute* EtatEnRoute::instanceUnique = new EtatEnRoute();
 
 EtatEnRoute *EtatEnRoute::instance() {
     return instanceUnique;
+}
+
+EtatRobot *EtatEnRoute::figer() {
+    return EtatFiger::instance();
 }

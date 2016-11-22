@@ -43,7 +43,15 @@ void Robot::saisir(Objet objet) {
 }
 
 void Robot::poser() {
-
+    try {
+#ifdef DEBUG
+        std::cout << "poser objet" << std::endl;
+#endif
+        _etat = _etat->poser();
+        _objet = nullptr;
+    }catch (const char* e){
+        cout << e << endl;
+    }
 }
 
 int Robot::peser() {
