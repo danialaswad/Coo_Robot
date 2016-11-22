@@ -10,7 +10,7 @@ void Robot::avancer(int x, int y) {
     #ifdef DEBUG
         std::cout << "DEBUG: Robot advancing from " << _position << " to " << Position(x, y) << std::endl;
     #endif
-        etat->avancer();
+        _etat->avancer();
         _position.set_x(x);
         _position.set_y(y);
     }catch (const char* e){

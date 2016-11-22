@@ -8,7 +8,7 @@
 
 #include "EtatEnRoute.h"
 
-class EtatAVideFacePlot: EtatEnRoute {
+class EtatAVideFacePlot: public EtatEnRoute {
 
 private:
     static  EtatAVideFacePlot* instanceUnique;

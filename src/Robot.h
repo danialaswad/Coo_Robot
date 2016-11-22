@@ -11,12 +11,14 @@
 #include "Plot.h"
 #include "Position.h"
 #include "EtatRobot.h"
+#include "etat/EtatAVide.h"
+#include "etat/EtatAVideFacePlot.h"
 
 using namespace std;
 
 class Robot {
 private:
-    EtatRobot* _etat = EtatRobot::instance();
+    EtatRobot* _etat = EtatAVideFacePlot::instance();
     string _direction;
     Position _position;
 
