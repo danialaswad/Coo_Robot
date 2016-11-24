@@ -12,6 +12,7 @@ class Observable {
     std::vector<Observer *> _observers;
 public:
 
+    // Need at least one virtual member function for dynamic typing at runtime
     virtual ~Observable();
 
     void attach(Observer *observer);
