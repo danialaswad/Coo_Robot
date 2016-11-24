@@ -22,4 +22,8 @@ int main() {
     r.peser();
     r.figer();
     //r.afficher();
+    r.repartir();
+    r.poser();
+    r.figer();
+    r.repartir();
 }

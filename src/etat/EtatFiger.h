@@ -8,17 +8,19 @@
 
 #include <stddef.h>
 #include "../EtatRobot.h"
+#include "EtatEnRoute.h"
 
 class EtatFiger : public EtatRobot {
 
 private:
+    EtatEnRoute* _etatRobot;
     static EtatFiger* instanceUniqe;
 
 protected:
     EtatFiger(){};
 
 public:
-    static EtatFiger* instance();
+    static EtatFiger* instance(EtatEnRoute* etatRobot);
 
     // changement d'etat
     virtual EtatRobot* repartir();

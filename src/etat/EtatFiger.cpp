@@ -6,11 +6,12 @@
 
 EtatFiger* EtatFiger::instanceUniqe = new EtatFiger();
 
-EtatFiger* EtatFiger::instance() {
+EtatFiger* EtatFiger::instance(EtatEnRoute* etatRobot) {
+    instanceUniqe->_etatRobot = etatRobot;
     return instanceUniqe;
 }
 
 EtatRobot *EtatFiger::repartir() {
     // Not the state that should be return
-    return this;
+    return _etatRobot;
 }

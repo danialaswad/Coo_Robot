@@ -12,5 +12,5 @@ EtatEnRoute *EtatEnRoute::instance() {
 }
 
 EtatRobot *EtatEnRoute::figer() {
-    return EtatFiger::instance();
+    return EtatFiger::instance(this);
 }
