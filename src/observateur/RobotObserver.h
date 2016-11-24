@@ -6,7 +6,7 @@
 #define COO_ROBOT_ROBOTOBSERVER_H
 
 
-#include "src/Observer.h"
+#include "Observer.h"
 
 class RobotObserver : public Observer{
 public:

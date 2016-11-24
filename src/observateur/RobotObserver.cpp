@@ -3,7 +3,7 @@
 //
 
 #include "RobotObserver.h"
-#include "src/Robot.h"
+#include "../Robot.h"
 
 RobotObserver::RobotObserver() {
 

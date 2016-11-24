@@ -1,6 +1,6 @@
 #include <iostream>
 #include "Robot.h"
-#include "../RobotObserver.h"
+#include "observateur/RobotObserver.h"
 
 using namespace std;
 

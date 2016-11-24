@@ -13,7 +13,7 @@
 #include "EtatRobot.h"
 #include "etat/EtatAVide.h"
 #include "etat/EtatAVideFacePlot.h"
-#include "Observable.h"
+#include "observateur/Observable.h"
 
 using namespace std;
 
