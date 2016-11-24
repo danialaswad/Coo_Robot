@@ -13,6 +13,7 @@ void Robot::avancer(int x, int y) {
         _etat = _etat->avancer();
         _position.set_x(x);
         _position.set_y(y);
+        notifyAll();
     }catch (const char* e){
         cout << e << endl;
     }
@@ -25,6 +26,7 @@ void Robot::tourner(string direction) {
     #endif
         _etat = _etat->tourner();
         _direction = direction;
+        notifyAll();
     }catch (const char* e){
         cout << e << endl;
     }
@@ -37,6 +39,7 @@ void Robot::saisir(Objet objet) {
 #endif
         _etat = _etat->saisir();
         _objet = objet;
+        notifyAll();
     }catch (const char* e){
         cout << e << endl;
     }
@@ -49,6 +52,7 @@ void Robot::poser() {
 #endif
         _etat = _etat->poser();
         _objet = NULL;
+        notifyAll();
     }catch (const char* e){
         cout << e << endl;
     }
@@ -61,6 +65,7 @@ int Robot::peser() {
 #endif
         _etat = _etat->peser();
         cout << _objet.get_poid() << endl;
+        notifyAll();
     }catch (const char* e){
         cout << e << endl;
     }
@@ -73,6 +78,7 @@ void Robot::rencontrerPlot(Plot p) {
 #endif
         _etat = _etat->rencontrerPlot();
         _plot = p;
+        notifyAll();
     }catch (const char* e){
         cout << e << endl;
     }
@@ -85,6 +91,7 @@ int Robot::evaluerPlot() {
 #endif
         _etat = _etat->evaluerPlot();
         cout << _plot.getHauteur() << endl;
+        notifyAll();
     }catch (const char* e){
         cout << e << endl;
     }
@@ -97,6 +104,7 @@ void Robot::figer() {
         std::cout << "figer" << std::endl;
 #endif
         _etat = _etat->figer();
+        notifyAll();
     }catch (const char* e){
         cout << e << endl;
     }
@@ -109,6 +117,7 @@ void Robot::repartir() {
         std::cout << "repartir" << std::endl;
 #endif
         _etat = _etat->repartir();
+        notifyAll();
     }catch (const char* e){
         cout << e << endl;
     }
@@ -116,5 +125,4 @@ void Robot::repartir() {
 
 void Robot::afficher() {
     std::cout << "Etat : " << *_etat << ", Position : " << _position << ", Direction : " << _direction << std::endl;
-
 }

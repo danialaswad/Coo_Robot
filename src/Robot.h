@@ -13,10 +13,11 @@
 #include "EtatRobot.h"
 #include "etat/EtatAVide.h"
 #include "etat/EtatAVideFacePlot.h"
+#include "Observable.h"
 
 using namespace std;
 
-class Robot {
+class Robot : public Observable{
 private:
     EtatRobot* _etat = EtatAVide::instance();
     string _direction;
