@@ -7,7 +7,7 @@
 
 
 #include <stddef.h>
-#include "../EtatRobot.h"
+#include "EtatRobot.h"
 #include "EtatEnRoute.h"
 
 class EtatFiger : public EtatRobot {

@@ -11,6 +11,7 @@ void Robot::avancer(int x, int y) {
         std::cout << "DEBUG: Robot advancing from " << _position << " to " << Position(x, y) << std::endl;
     #endif
         _etat = _etat->avancer();
+        cout << "J'avance en x : " << x << " y : " << y << endl;
         _position.set_x(x);
         _position.set_y(y);
         notifyAll();
@@ -64,8 +65,8 @@ int Robot::peser() {
         std::cout << "peser" << std::endl;
 #endif
         _etat = _etat->peser();
-        cout << _objet.get_poid() << endl;
         notifyAll();
+        return _objet.get_poid();
     }catch (const char* e){
         cout << e << endl;
     }
@@ -90,8 +91,9 @@ int Robot::evaluerPlot() {
         std::cout << "evaluer plot" << std::endl;
 #endif
         _etat = _etat->evaluerPlot();
-        cout << _plot.getHauteur() << endl;
         notifyAll();
+
+        return _plot.getHauteur();
     }catch (const char* e){
         cout << e << endl;
     }

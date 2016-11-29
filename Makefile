@@ -31,8 +31,8 @@ Objet.o: src/Objet.cpp src/Objet.h
 main.o: src/main.cpp
 	$(CXX)  src/main.cpp
 
-EtatRobot.o: src/EtatRobot.cpp src/EtatRobot.h
-	$(CXX)  src/EtatRobot.cpp
+EtatRobot.o: src/etat/EtatRobot.cpp src/etat/EtatRobot.h
+	$(CXX)  src/etat/EtatRobot.cpp
 
 RobotObserver.o: src/observateur/RobotObserver.cpp src/observateur/RobotObserver.h
 	$(CXX)  src/observateur/RobotObserver.cpp

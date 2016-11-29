@@ -6,7 +6,7 @@
 #define COO_ROBOT_ETATENROUTE_H
 
 
-#include "../EtatRobot.h"
+#include "EtatRobot.h"
 
 class EtatEnRoute : public EtatRobot {
 

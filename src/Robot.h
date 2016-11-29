@@ -10,7 +10,7 @@
 #include "Objet.h"
 #include "Plot.h"
 #include "Position.h"
-#include "EtatRobot.h"
+#include "etat/EtatRobot.h"
 #include "etat/EtatAVide.h"
 #include "etat/EtatAVideFacePlot.h"
 #include "observateur/Observable.h"
