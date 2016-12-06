@@ -12,8 +12,7 @@ class Tourner : public CommandeRobot{
 
 public:
     string _direction;
-    Tourner(){};
-    Tourner(string direction): _direction(direction){};
+    Tourner(string s,string direction):CommandeRobot(s), _direction(direction){};
     virtual void execute();
 
     virtual Commande* constructeurVirtuel(Invocateur& invocateur);

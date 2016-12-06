@@ -14,7 +14,7 @@ Commande *Commande::constructeurVirtuel(Invocateur& invocateur) {
     return nullptr;
 }
 
-static Commande *Commande::nouvelleCommande(string d, Invocateur* invocateur) {
+Commande *Commande::nouvelleCommande(string d, Invocateur* invocateur) {
     return commandeInvoque()[d]->constructeurVirtuel(*invocateur);
 }
 
@@ -27,5 +27,5 @@ void Commande::desexecute() {
 }
 
 Commande::Commande(std::string s) {
-
+    commandeInvoque()[s]=this;
 }

@@ -7,10 +7,13 @@
 
 
 #include "../Commande.h"
+#include "../CommandeRobot.h"
 
-class Poser : public Commande{
+class Poser : public CommandeRobot{
 
 public:
+    Poser(string s): CommandeRobot(s){};
+
     virtual void execute();
 
     virtual Commande* constructeurVirtuel(Invocateur& invocateur);

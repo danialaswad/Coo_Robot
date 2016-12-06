@@ -14,8 +14,7 @@ class Avancer : public CommandeRobot{
 public:
     int _x;
     int _y;
-    Avancer(){};
-    Avancer(int x, int y): _x(x), _y(y){};
+    Avancer(string s, int x, int y):CommandeRobot(s), _x(x), _y(y){};
     virtual Commande* constructeurVirtuel(Invocateur& invocateur);
 
     virtual void execute();

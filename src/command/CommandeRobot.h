@@ -12,6 +12,8 @@
 #include "../Robot.h"
 
 class CommandeRobot : public Commande {
+public:
+    CommandeRobot(const string &s);
 
 private:
     Robot _recepteur;

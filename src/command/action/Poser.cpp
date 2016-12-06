@@ -9,6 +9,6 @@ void Poser::execute() {
 
 
 Commande *Poser::constructeurVirtuel(Invocateur &invocateur) {
-    return new Poser();
+    return new Poser("poser");
 }
 
