@@ -3,7 +3,25 @@
 //
 
 #include "Commande.h"
+using namespace std;
 
-EtatRobot* Commande::execute() {
+map<string, Commande *> &Commande::commandeInvoque() {
+    static map<string, Commande*>* comInvoque = new map<string, Commande*>;
+    return *comInvoque;
+}
+
+Commande *Commande::constructeurVirtuel() {
     return nullptr;
+}
+
+static Commande *Commande::nouvelleCommande(std::string d) {
+    return commandeInvoque()[d]->constructeurVirtuel();
+}
+
+void Commande::execute() {
+
+}
+
+void Commande::desexecute() {
+
 }

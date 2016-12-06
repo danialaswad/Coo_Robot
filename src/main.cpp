@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Robot.h"
 #include "observateur/RobotObserver.h"
+#include "command/Commande.h"
 
 using namespace std;
 
@@ -9,7 +10,7 @@ int main() {
     Observer* observer= new RobotObserver;
     r.attach(observer);
     //r.afficher();
-    r.avancer(0, 1);
+    /*r.avancer(0, 1);
     //r.afficher();
     r.tourner("S");
     //r.afficher();
@@ -25,5 +26,6 @@ int main() {
     r.repartir();
     r.poser();
     r.figer();
-    r.repartir();
+    r.repartir();*/
+
 }
