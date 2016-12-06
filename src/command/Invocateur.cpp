@@ -13,6 +13,6 @@ void Invocateur::invoke() {
     string s;
     cout << "Commande : " ;
     cin >> s;
-    Commande* com = Commande::nouvelleCommande(s);
+    Commande* com = Commande::nouvelleCommande(s, this);
     com->execute();
 }

@@ -9,6 +9,7 @@ int main() {
     Robot r = Robot("N");
     Observer* observer= new RobotObserver;
     r.attach(observer);
+    Commande commande("hello");
     //r.afficher();
     /*r.avancer(0, 1);
     //r.afficher();
