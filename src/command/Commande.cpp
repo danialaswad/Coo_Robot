@@ -10,12 +10,12 @@ map<string, Commande *> &Commande::commandeInvoque() {
     return *comInvoque;
 }
 
-Commande *Commande::constructeurVirtuel() {
+Commande *Commande::constructeurVirtuel(Invocateur& invocateur) {
     return nullptr;
 }
 
 static Commande *Commande::nouvelleCommande(std::string d) {
-    return commandeInvoque()[d]->constructeurVirtuel();
+    return commandeInvoque()[d]->constructeurVirtuel(*_invocateur);
 }
 
 void Commande::execute() {

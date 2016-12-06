@@ -7,6 +7,6 @@
 void Avancer::execute() {
 }
 
-Commande *Avancer::constructeurVirtuel() {
+Commande *Avancer::constructeurVirtuel(Invocateur& invocateur) {
     return new Avancer();
 }

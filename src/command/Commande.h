@@ -14,13 +14,13 @@
 class Commande {
 
 private:
-    Invocateur* invocateur = new Invocateur;
+    static Invocateur*_invocateur = new Invocateur;
     static std::map<std::string,Commande*> &commandeInvoque();
 
 public:
     Commande(){};
     static Commande* nouvelleCommande(std::string d);
-    virtual Commande* constructeurVirtuel();
+    virtual Commande* constructeurVirtuel(Invocateur& invocateur);
 
 
     virtual void execute();

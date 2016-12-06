@@ -7,3 +7,7 @@
 void Tourner::execute() {
 
 }
+
+Commande *Tourner::constructeurVirtuel(Invocateur &invocateur) {
+    return new Tourner();
+}
