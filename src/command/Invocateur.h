@@ -10,6 +10,8 @@ class Invocateur {
 
 public:
     void invoke();
+
+    int next_int();
 };
 
 

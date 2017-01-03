@@ -10,10 +10,6 @@ map<string, Commande *> &Commande::commandeInvoque() {
     return *comInvoque;
 }
 
-Commande *Commande::constructeurVirtuel(Invocateur& invocateur) {
-    return nullptr;
-}
-
 Commande *Commande::nouvelleCommande(string d, Invocateur* invocateur) {
     return commandeInvoque()[d]->constructeurVirtuel(*invocateur);
 }

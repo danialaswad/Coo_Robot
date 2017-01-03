@@ -20,7 +20,7 @@ private:
 public:
     Commande(std::string s);
     static Commande* nouvelleCommande(std::string d, Invocateur* invocateur);
-    virtual Commande* constructeurVirtuel(Invocateur& invocateur);
+    virtual Commande* constructeurVirtuel(Invocateur& invocateur)=0;
 
 
     virtual void execute();

@@ -8,5 +8,7 @@ void Avancer::execute() {
 }
 
 Commande *Avancer::constructeurVirtuel(Invocateur& invocateur) {
-    return new Avancer("avancer",1,2);
+    int new_x=invocateur.next_int();
+    int new_y=invocateur.next_int();
+    return new Avancer("avancer", new_x, new_y);
 }

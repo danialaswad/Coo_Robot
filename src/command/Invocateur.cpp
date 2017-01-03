@@ -8,55 +8,31 @@
 #include <iostream>
 #include <vector>
 #include <sstream>
+#include <exception>
 
 
 using namespace std;
 
-
-/**
- * Split a string around a delimiter and put tokens inside a vector
- * @param s The string to split
- * @param delim The delimiter to use
- * @param elems The vector where the token will be copied
- */
-void split(const std::string &s, char delim, std::vector<std::string> &elems) {
-    std::stringstream ss;
-    ss.str(s);
-    std::string item;
-    while (std::getline(ss, item, delim)) {
-        elems.push_back(item);
-    }
-}
-
-void parse(const std::vector<std::string> &args, Robot& robot) {
-    if (args.size() < 1) {
-        std::cout << "Command must have at least a name" << std::endl;
-        return;
-    }
-    if (args[0] == "avancer") {
-        if (args.size() != 3) {
-            std::cout << "Wrong number of arguments, expect 2 (int,int), got " << args.size() - 1 << std::endl;
-            return;
-        }
-        int new_x = stoi(args[1]);
-        int new_y = stoi(args[2]);
-        robot.avancer(new_x, new_y);
-    } else {
-        std::cout << "Unknown command '" << args[0] << "'" << std::endl;
-    }
-}
-
-
 void Invocateur::invoke() {
-    std::string line;
-    std::vector<std::string> commands;
-    getline(std::cin, line);
-    while (line != "q") {
-        split(line, ' ', commands);
-        parse(commands, r);
-        commands.clear();
-        line.clear();
-        getline(std::cin, line);
+    string command_name;
+    cout << "Commande : " ;
+    cin >> command_name;
+    while(command_name!="quit" || command_name!="q") {
+        Commande *com = Commande::nouvelleCommande(command_name, this);
+        com->execute();
+        cin >> command_name;
     }
+}
+
+int Invocateur::next_int() {
+    int next_int;
+    try {
+        cin >> next_int;
+    }
+    catch (exception const& e) {
+        e.what();
+        exit(-1);
+    }
+    return next_int;
 }
 
