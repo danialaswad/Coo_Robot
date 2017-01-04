@@ -43,6 +43,8 @@ public:
 
     //getter
     const Position &get_position() const;
+
+    const string &get_direction() const;
 };
 
 

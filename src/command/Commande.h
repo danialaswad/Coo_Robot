@@ -8,6 +8,7 @@
 
 #include <map>
 #include <string>
+#include <stack>
 #include "../etat/EtatRobot.h"
 #include "Invocateur.h"
 
@@ -22,9 +23,9 @@ protected:
 public:
     Commande(std::string s);
     static Commande* nouvelleCommande(std::string d, Invocateur* invocateur);
+    static std::stack<Commande*> previous_actions;
+
     virtual Commande* constructeurVirtuel(Invocateur& invocateur)=0;
-
-
     virtual void execute()=0;
     virtual void desexecute()=0;
 };

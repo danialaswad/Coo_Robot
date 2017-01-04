@@ -14,9 +14,11 @@ void Avancer::execute() {
 Commande *Avancer::constructeurVirtuel(Invocateur& invocateur) {
     int new_x=invocateur.next_int();
     int new_y=invocateur.next_int();
-    return new Avancer(invocateur.getTargetRobot(),new_x, new_y);
+    Commande* cmd= new Avancer(invocateur.getTargetRobot(),new_x, new_y);
+    Commande::previous_actions.push(cmd);
+    return cmd;
 }
 
 void Avancer::desexecute() {
-
+    _recepteur->avancer(_previous);
 }

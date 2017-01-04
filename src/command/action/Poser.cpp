@@ -7,11 +7,14 @@
 Poser Poser::CMD_POSER("POSER");
 
 void Poser::execute() {
+    _recepteur->poser();
 }
 
 
 Commande *Poser::constructeurVirtuel(Invocateur &invocateur) {
-    return new Poser(invocateur.getTargetRobot());
+    Commande* cmd=new Poser(invocateur.getTargetRobot());
+    Commande::previous_actions.push(cmd);
+    return cmd;
 }
 
 void Poser::desexecute() {

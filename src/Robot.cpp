@@ -131,3 +131,7 @@ void Robot::afficher() {
 const Position &Robot::get_position() const {
     return _position;
 }
+
+const string &Robot::get_direction() const {
+    return _direction;
+}

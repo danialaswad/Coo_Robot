@@ -6,6 +6,8 @@
 #include <iostream>
 using namespace std;
 
+std::stack<Commande*> Commande::previous_actions;
+
 map<string, Commande *> &Commande::commandeInvoque() {
     // TODO les parenthèses ici ?
     static map<string, Commande*>* comInvoque = new map<string, Commande*>;
