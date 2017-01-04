@@ -48,3 +48,7 @@ string Invocateur::next_word() {
     return next_word;
 }
 
+Robot* Invocateur::getTargetRobot() const{
+    return _robot;
+}
+

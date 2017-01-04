@@ -13,12 +13,12 @@
 
 class CommandeRobot : public Commande {
 public:
-    CommandeRobot();
+    CommandeRobot(Robot* robot);
 
     CommandeRobot(const string &s);
 
 private:
-    Robot _recepteur;
+    Robot* _recepteur;
 };
 
 

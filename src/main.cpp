@@ -8,6 +8,6 @@ int main() {
     Robot r = Robot("N");
     Observer* observer= new RobotObserver;
     r.attach(observer);
-    Invocateur invocateur;
+    Invocateur invocateur(&r);
     invocateur.invoke();
 }

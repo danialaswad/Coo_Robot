@@ -12,10 +12,12 @@ class Tourner : public CommandeRobot{
 
 public:
     static Tourner CMD_TOURNER;
-    string _direction;
+    string previous_direction;
     Tourner(string s):CommandeRobot(s){};
-    Tourner(string direction, bool doesNothing):_direction(direction){};
+    Tourner(Robot* robot, string direction):CommandeRobot(robot){};
     virtual void execute();
+
+    void desexecute() override;
 
     virtual Commande* constructeurVirtuel(Invocateur& invocateur);
 };

@@ -11,8 +11,10 @@ void Poser::execute() {
 
 
 Commande *Poser::constructeurVirtuel(Invocateur &invocateur) {
-    return new Poser();
+    return new Poser(invocateur.getTargetRobot());
 }
 
-Poser::Poser() {}
+void Poser::desexecute() {
+    return;
+}
 

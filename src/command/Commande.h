@@ -14,7 +14,6 @@
 class Commande {
 
 private:
-    Invocateur*_invocateur = new Invocateur;
     static std::map<std::string,Commande*> &commandeInvoque();
 
 protected:
@@ -26,8 +25,8 @@ public:
     virtual Commande* constructeurVirtuel(Invocateur& invocateur)=0;
 
 
-    virtual void execute();
-    virtual void desexecute();
+    virtual void execute()=0;
+    virtual void desexecute()=0;
 };
 
 

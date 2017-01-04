@@ -14,12 +14,18 @@ class Avancer : public CommandeRobot{
 public:
     int _x;
     int _y;
+    int _last_x;
+    int _last_y;
+
     static Avancer CMD_AVANCER;
 
     Avancer(string s) : CommandeRobot(s) {};
-    Avancer(int x, int y):_x(x), _y(y){};
+    Avancer(Robot* robot, int x, int y):CommandeRobot(robot), _x(x), _y(y){};
+
     virtual Commande* constructeurVirtuel(Invocateur& invocateur);
     virtual void execute();
+
+    void desexecute() override;
 };
 
 

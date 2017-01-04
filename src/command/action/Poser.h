@@ -12,13 +12,15 @@
 class Poser : public CommandeRobot{
 
 public:
-    Poser();
+    Poser(Robot* robot): CommandeRobot(robot){};
 
     static Poser CMD_POSER;
 
     Poser(string s): CommandeRobot(s){};
 
     virtual void execute();
+
+    void desexecute() override;
 
     virtual Commande* constructeurVirtuel(Invocateur& invocateur);
 };
