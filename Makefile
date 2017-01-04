@@ -1,5 +1,5 @@
 #example name of the executable to generate
-EXE_NAME=robot
+EXE_NAME=robot.exe
 
 #extra header file pathes (if empty, please add '.')
 EXTRA_HEADER_PATH=.
