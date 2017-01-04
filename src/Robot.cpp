@@ -4,16 +4,15 @@
 
 #include "Robot.h"
 
-void Robot::avancer(int x, int y) {
+void Robot::avancer(Position p) {
 
     try {
     #ifdef DEBUG
-        std::cout << "DEBUG: Robot advancing from " << _position << " to " << Position(x, y) << std::endl;
+        std::cout << "DEBUG: Robot advancing from " << _position << " to " << p << std::endl;
     #endif
         _etat = _etat->avancer();
-        cout << "J'avance en x : " << x << " y : " << y << endl;
-        _position.set_x(x);
-        _position.set_y(y);
+        cout << "J'avance en x : " << p.get_x() << " y : " << p.get_y() << endl;
+        _position=p;
         notifyAll();
     }catch (const char* e){
         cout << e << endl;
@@ -127,4 +126,8 @@ void Robot::repartir() {
 
 void Robot::afficher() {
     std::cout << "Etat : " << *_etat << ", Position : " << _position << ", Direction : " << _direction << std::endl;
+}
+
+const Position &Robot::get_position() const {
+    return _position;
 }

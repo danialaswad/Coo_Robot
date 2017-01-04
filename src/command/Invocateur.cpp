@@ -16,18 +16,18 @@ using namespace std;
 void Invocateur::invoke() {
     string command_name;
     cout << "Commande : " ;
-    cin >> command_name;
-    while(command_name!="quit" || command_name!="q") {
+    (*_input_stream) >> command_name;
+    while(command_name.compare("quit")!=0 || command_name.compare("quit")!=0 ) {
         Commande *com = Commande::nouvelleCommande(command_name, this);
         com->execute();
-        cin >> command_name;
+        (*_input_stream) >> command_name;
     }
 }
 
 int Invocateur::next_int() {
     int next_int;
     try {
-        cin >> next_int;
+        (*_input_stream) >> next_int;
     }
     catch (const exception& e) {
         e.what();
@@ -39,7 +39,7 @@ int Invocateur::next_int() {
 string Invocateur::next_word() {
     string next_word;
     try {
-        cin >> next_word;
+        (*_input_stream) >> next_word;
     }
     catch (const exception& e){
         e.what();

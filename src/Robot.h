@@ -30,7 +30,7 @@ public:
     Robot ():_direction("N"){};
     Robot (string direction): _direction(direction), _position(0,0){};
     // member function
-    void avancer(int x, int y);
+    void avancer(Position p);
     void tourner(string direction);
     void saisir(Objet objet);
     void poser();
@@ -40,6 +40,9 @@ public:
     void figer();
     void repartir();
     void afficher();
+
+    //getter
+    const Position &get_position() const;
 };
 
 

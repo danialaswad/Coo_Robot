@@ -17,7 +17,7 @@ public:
 
     CommandeRobot(const string &s);
 
-private:
+protected:
     Robot* _recepteur;
 };
 

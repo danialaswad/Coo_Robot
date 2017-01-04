@@ -7,6 +7,8 @@
 Avancer Avancer::CMD_AVANCER("AVANCER");
 
 void Avancer::execute() {
+    _previous = _recepteur->get_position();
+    _recepteur->avancer(_new);
 }
 
 Commande *Avancer::constructeurVirtuel(Invocateur& invocateur) {
@@ -16,5 +18,5 @@ Commande *Avancer::constructeurVirtuel(Invocateur& invocateur) {
 }
 
 void Avancer::desexecute() {
-    return;
+
 }

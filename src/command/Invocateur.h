@@ -13,10 +13,12 @@ class Invocateur {
 
 private:
     Robot* _robot;
+    std::istream* _input_stream;
 
 public:
-    Invocateur(Robot* r) : _robot(r){};
-
+    Invocateur(Robot* r, std::istream* is) : _robot(r) {
+        _input_stream =is;
+    };
     void invoke();
     int next_int();
     std::string next_word();
