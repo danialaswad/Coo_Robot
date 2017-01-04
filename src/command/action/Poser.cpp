@@ -4,11 +4,15 @@
 
 #include "Poser.h"
 
+Poser Poser::CMD_POSER("POSER");
+
 void Poser::execute() {
 }
 
 
 Commande *Poser::constructeurVirtuel(Invocateur &invocateur) {
-    return new Poser("poser");
+    return new Poser();
 }
+
+Poser::Poser() {}
 

@@ -29,10 +29,22 @@ int Invocateur::next_int() {
     try {
         cin >> next_int;
     }
-    catch (exception const& e) {
+    catch (const exception& e) {
         e.what();
         exit(-1);
     }
     return next_int;
+}
+
+string Invocateur::next_word() {
+    string next_word;
+    try {
+        cin >> next_word;
+    }
+    catch (const exception& e){
+        e.what();
+        exit(-1);
+    }
+    return next_word;
 }
 

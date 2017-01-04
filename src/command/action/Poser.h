@@ -12,6 +12,10 @@
 class Poser : public CommandeRobot{
 
 public:
+    Poser();
+
+    static Poser CMD_POSER;
+
     Poser(string s): CommandeRobot(s){};
 
     virtual void execute();
