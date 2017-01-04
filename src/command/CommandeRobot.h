@@ -13,6 +13,8 @@
 
 class CommandeRobot : public Commande {
 public:
+    CommandeRobot();
+
     CommandeRobot(const string &s);
 
 private:

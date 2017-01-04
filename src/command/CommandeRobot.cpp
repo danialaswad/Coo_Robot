@@ -4,5 +4,6 @@
 
 #include "CommandeRobot.h"
 
+CommandeRobot::CommandeRobot() : Commande() {}
 
 CommandeRobot::CommandeRobot(const string &s) : Commande(s) {}

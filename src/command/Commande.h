@@ -17,6 +17,9 @@ private:
     Invocateur*_invocateur = new Invocateur;
     static std::map<std::string,Commande*> &commandeInvoque();
 
+protected:
+    Commande();
+
 public:
     Commande(std::string s);
     static Commande* nouvelleCommande(std::string d, Invocateur* invocateur);

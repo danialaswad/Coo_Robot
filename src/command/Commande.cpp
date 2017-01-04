@@ -3,9 +3,11 @@
 //
 
 #include "Commande.h"
+#include <iostream>
 using namespace std;
 
 map<string, Commande *> &Commande::commandeInvoque() {
+    // TODO les parenthèses ici ?
     static map<string, Commande*>* comInvoque = new map<string, Commande*>;
     return *comInvoque;
 }
@@ -24,4 +26,7 @@ void Commande::desexecute() {
 
 Commande::Commande(std::string s) {
     commandeInvoque()[s]=this;
+    cout << "Map <- " << s << endl;
 }
+
+Commande::Commande() {}
