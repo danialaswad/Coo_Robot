@@ -65,22 +65,23 @@ Commande.o: src/command/Commande.cpp src/command/Commande.h
 	$(CXX)  src/command/Commande.cpp
 
 CommandeRobot.o: src/command/CommandeRobot.cpp src/command/CommandeRobot.h 
-    $(CXX)  src/command/CommandeRobot.cpp
+	$(CXX)  src/command/CommandeRobot.cpp
 
 Invocateur.o: src/command/Invocateur.cpp src/command/Invocateur.h 
-    $(CXX)  src/command/Invocateur.cpp
+	$(CXX)  src/command/Invocateur.cpp
     
 Annuler.o: src/command/action/Annuler.cpp src/command/action/Annuler.h 
-    $(CXX)  src/command/action/Annuler.cpp
+	$(CXX)  src/command/action/Annuler.cpp
     
 Avancer.o: src/command/action/Avancer.cpp src/command/action/Avancer.h 
-    $(CXX)  src/command/action/Avancer.cpp
+	$(CXX)  src/command/action/Avancer.cpp
     
 Poser.o: src/command/action/Poser.cpp src/command/action/Poser.h 
-    $(CXX)  src/command/action/Poser.cpp
+	$(CXX)  src/command/action/Poser.cpp
 
 Tourner.o: src/command/action/Tourner.cpp src/command/action/Tourner.h 
-    $(CXX)  src/command/action/Tourner.cpp
+	$(CXX)  src/command/action/Tourner.cpp
+	
 clean:
 	-rm -f *.o
 	-rm -f $(EXE_NAME)
