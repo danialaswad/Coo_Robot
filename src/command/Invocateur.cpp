@@ -20,6 +20,7 @@ void Invocateur::invoke() {
     while(command_name.compare("quit")!=0 || command_name.compare("quit")!=0 ) {
         Commande *com = Commande::nouvelleCommande(command_name, this);
         com->execute();
+        cout << "Commande : " ;
         (*_input_stream) >> command_name;
     }
 }
