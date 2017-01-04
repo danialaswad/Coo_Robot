@@ -13,8 +13,8 @@ CXX = g++ $(CXX_FLAGS) -I$(EXTRA_HEADER_PATH) -c
 #variable for the linkers (which are here include in the same command line than the compiler
 LINK_CXX = g++
 
-robot: Robot.o Position.o Plot.o Objet.o main.o EtatRobot.o RobotObserver.o Observer.o Observable.o EtatFiger.o EtatEnRoute.o EtatEnChargeFacePlot.o EtatEnCharge.o EtatAVideFacePlot.o EtatAVide.o Commande.o
-	$(LINK_CXX) Robot.o Position.o Plot.o Objet.o main.o EtatRobot.o RobotObserver.o Observer.o Observable.o EtatFiger.o EtatEnRoute.o EtatEnChargeFacePlot.o EtatEnCharge.o EtatAVideFacePlot.o EtatAVide.o Commande.o -o $(EXE_NAME)
+robot: Robot.o Position.o Plot.o Objet.o main.o EtatRobot.o RobotObserver.o Observer.o Observable.o EtatFiger.o EtatEnRoute.o EtatEnChargeFacePlot.o EtatEnCharge.o EtatAVideFacePlot.o EtatAVide.o Commande.o CommandeRobot.o Invocateur.o Annuler.o Avancer.o Poser.o Tourner.o
+	$(LINK_CXX) Robot.o Position.o Plot.o Objet.o main.o EtatRobot.o RobotObserver.o Observer.o Observable.o EtatFiger.o EtatEnRoute.o EtatEnChargeFacePlot.o EtatEnCharge.o EtatAVideFacePlot.o EtatAVide.o Commande.o CommandeRobot.o Invocateur.o Annuler.o Avancer.o Poser.o Tourner.o -o $(EXE_NAME)
 
 Robot.o: src/Robot.cpp src/Robot.h
 	$(CXX)  src/Robot.cpp
@@ -64,6 +64,23 @@ EtatAVide.o: src/etat/EtatAVide.cpp src/etat/EtatAVide.h
 Commande.o: src/command/Commande.cpp src/command/Commande.h
 	$(CXX)  src/command/Commande.cpp
 
+CommandeRobot.o: src/command/CommandeRobot.cpp src/command/CommandeRobot.h 
+    $(CXX)  src/command/CommandeRobot.cpp
+
+Invocateur.o: src/command/Invocateur.cpp src/command/Invocateur.h 
+    $(CXX)  src/command/Invocateur.cpp
+    
+Annuler.o: src/command/action/Annuler.cpp src/command/action/Annuler.h 
+    $(CXX)  src/command/action/Annuler.cpp
+    
+Avancer.o: src/command/action/Avancer.cpp src/command/action/Avancer.h 
+    $(CXX)  src/command/action/Avancer.cpp
+    
+Poser.o: src/command/action/Poser.cpp src/command/action/Poser.h 
+    $(CXX)  src/command/action/Poser.cpp
+
+Tourner.o: src/command/action/Tourner.cpp src/command/action/Tourner.h 
+    $(CXX)  src/command/action/Tourner.cpp
 clean:
 	-rm -f *.o
 	-rm -f $(EXE_NAME)
